@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    align-items: center;
+  }
+  
+  table {
+    font-size: 0.9em;
+    margin-top:90px ;
+    padding: 4px;
+    border-spacing: 0;
+    width: 40%;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+
+
+
+  .notice-input {
+    width: 100%;
+  }
+  

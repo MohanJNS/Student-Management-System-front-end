@@ -1,0 +1,118 @@
+<!-- <form (ngSubmit)="onSubmit()">
+
+
+
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="notice.noticeTitle" name="title" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Student ID</mat-label>
+      <input matInput placeholder="Enter student ID" [(ngModel)]="notice.studentId" name="studentId">
+    </mat-form-field>
+
+     <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Class</mat-label>
+      <mat-select name="class" [(ngModel)]="notice.studentClassId" (selectionChange)="changeClass($event)">
+        <mat-option value="">Select</mat-option>
+        <mat-option *ngFor="let class of classes" [value]="class.id">{{ class.className }} {{ class.section }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+
+      <mat-form-field>
+        <mat-label>Message</mat-label>
+        <textarea matInput [(ngModel)]="notice.noticeMsg" name="message" required></textarea>
+      </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="notice.creationDate" name="date" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Send Notice</button>
+  </form> -->
+
+
+
+
+
+  <form (ngSubmit)="onSubmit()">
+    <mat-radio-group [(ngModel)]="notice.noticeTarget" name="target">
+      <mat-radio-button value="classId">Send to Class</mat-radio-button>
+      <mat-radio-button value="studentId">Send to Student</mat-radio-button>
+    </mat-radio-group>
+     <mat-form-field>
+        <mat-label>Target</mat-label>
+        <mat-select name="noticeTarget" [(ngModel)]="notice.noticeTarget">
+          <mat-option value="studentId">Student</mat-option>
+          <mat-option value="classId">Class</mat-option>
+        </mat-select>
+      </mat-form-field>
+ 
+      <mat-form-field *ngIf="notice.noticeTarget === 'classId'">
+        <mat-label>Class</mat-label>
+        <mat-select name="class" [(ngModel)]="notice.studentClassId" (selectionChange)="onchangeclass()">
+          <mat-option value="">Select</mat-option>
+          <mat-option *ngFor="let class of classes" [value]="class.id">{{ class.className }} {{ class.section }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+
+   
+      
+      <mat-form-field *ngIf="notice.noticeTarget === 'studentId'">
+        <mat-label>Class</mat-label>
+        <mat-select name="class" [(ngModel)]="notice.studentClassId" (selectionChange)="onchangeclass()">
+          <mat-option value="">Select</mat-option>
+          <mat-option *ngFor="let class of classes" [value]="class.id">{{ class.className }} {{ class.section }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field *ngIf="notice.noticeTarget === 'studentId'">
+        <mat-label>Student</mat-label>
+        <mat-select name="student" [(ngModel)]="notice.studentId">
+          <mat-option value="">Select</mat-option>
+          <mat-option *ngFor="let student of filteredStudents" [value]="student.studentId">{{ student.studentName }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+       
+    
+  
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="notice.noticeTitle" name="title" required>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Message</mat-label>
+      <textarea matInput [(ngModel)]="notice.noticeMsg" name="message" required></textarea>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="notice.creationDate" name="date" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" type="submit">Send Notice</button>
+  </form>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

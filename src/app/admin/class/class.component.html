@@ -1,0 +1,39 @@
+<mat-card class="card-style">
+    <mat-card-content>
+      <form (ngSubmit)="formSubmit()">
+        <mat-form-field>
+          <mat-label>Class Name</mat-label>
+          <input [(ngModel)]="studentclass.className" name="className" matInput placeholder="Enter here">
+        </mat-form-field>
+  
+        <!-- <mat-form-field>
+          <mat-label>Section</mat-label>
+          <input [(ngModel)]="studentclass.section" name="section" matInput placeholder="Enter here">
+        </mat-form-field> -->
+  
+        <mat-form-field>
+          <mat-label>Section</mat-label>
+          <mat-select [(ngModel)]="studentclass.section" name="section" placeholder="Select section">
+            <mat-option value="A">A</mat-option>
+            <mat-option value="B">B</mat-option>
+            <mat-option value="C">C</mat-option>
+            <mat-option value="D">D</mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+    
+        <mat-form-field >
+          <mat-label>Created date</mat-label>
+          <input [(ngModel)]="studentclass.createdat" matInput [matDatepicker]="dobpicker" placeholder="Choose a date" name="dob">
+          <mat-datepicker-toggle matSuffix [for]="dobpicker"></mat-datepicker-toggle>
+          <mat-datepicker #dobpicker></mat-datepicker>
+        </mat-form-field>
+  
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+        <button type="button" class="ml40" mat-raised-button color="accent" (click)="edit()">Edit</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
+  
+  

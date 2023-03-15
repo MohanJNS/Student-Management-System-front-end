@@ -1,0 +1,32 @@
+/* 
+  .mat-elevation-z8 {
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  h2 {
+    color: #b71e1e;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  strong {
+    color: #2c0202;
+    font-size: 16px;
+  } */
+
+  .notice-card {
+    margin: 20px;
+  }
+
+  .notice-header {
+    background-color: #872927;
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .notice-content {
+    padding: 35px;
+  }

@@ -1,0 +1,119 @@
+ <div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-6 offset-md-3">
+        <mat-card>
+          <div class="container text-center">
+         
+          </div>
+
+          <h1 class="text-center">Register here</h1>
+
+          <form (ngSubmit)="formSubmit()">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Student Name</mat-label>
+              <input [(ngModel)]="student.studentName" name="studentName" matInput placeholder="Enter here">
+            </mat-form-field>
+
+            <!-- <mat-form-field class="full-width" appearance="outline">
+              <mat-label>class</mat-label>
+              <mat-select name="class" [(ngModel)]="student.studentClass" (selectionChange)="changeClass($event)">
+                <mat-option value="">Select</mat-option>
+                <mat-option *ngFor="let class of classes" [value]="class.id">{{ class.className }} {{ class.section }}</mat-option>
+        
+              </mat-select>
+            </mat-form-field> -->
+
+
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Class</mat-label>
+              <mat-select name="class" [(ngModel)]="student.studentClassId" (selectionChange)="changeClass($event)">
+                <mat-option value="">Select</mat-option>
+                <mat-option *ngFor="let class of classes" [value]="class.id">{{ class.className }} {{ class.section }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            
+            <mat-radio-group [(ngModel)]="student.gender" name="gender">
+              <mat-radio-button value="Male">Male</mat-radio-button>
+              <mat-radio-button value="Female">Female</mat-radio-button>
+              <mat-radio-button value="Other">Other</mat-radio-button>
+            </mat-radio-group>
+            
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Date of Birth</mat-label>
+              <input [(ngModel)]="student.dob" matInput [matDatepicker]="dobpicker" placeholder="Choose a date" name="dob">
+              <mat-datepicker-toggle matSuffix [for]="dobpicker"></mat-datepicker-toggle>
+              <mat-datepicker #dobpicker></mat-datepicker>
+            </mat-form-field>
+            
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Student ID</mat-label>
+              <input [(ngModel)]="student.studentId" name="studentId" matInput placeholder="Enter here">
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Father's Name</mat-label>
+              <input [(ngModel)]="student.fatherName" name="fatherName" matInput placeholder="Enter here">
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Mother's Name</mat-label>
+              <input [(ngModel)]="student.motherName" name="motherName" matInput placeholder="Enter here">
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Phone Number</mat-label>
+              <input [(ngModel)]="student.phoneNumber" name="phoneNumber" type="number" matInput placeholder="Enter here">
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Alternate Number</mat-label>
+              <input [(ngModel)]="student.alternateNumber" name="phoneNumber" type="number" matInput placeholder="Enter here">
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Address</mat-label>
+              <input [(ngModel)]="student.address" name="address" matInput placeholder="Enter here">
+            </mat-form-field>
+
+            <!-- <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Username</mat-label>
+              <input [(ngModel)]="student.username" name="username" matInput placeholder="Enter here">
+           
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input [(ngModel)]="student.password" name="password" type="password" matInput placeholder="Enter here">
+            </mat-form-field> -->
+              
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Date of Admission</mat-label>
+                <input [(ngModel)]="student.Admissiondate" matInput [matDatepicker]="admissionPicker" value="" placeholder="Choose a date">
+                <mat-datepicker-toggle matSuffix [for]="admissionPicker"></mat-datepicker-toggle>
+                <mat-datepicker #admissionPicker></mat-datepicker>
+              </mat-form-field>
+
+
+
+              <div class="container text-center">
+                <button type="submit"  mat-raised-button color="primary">Register</button>
+             
+
+                </div>
+              
+                    </form>
+                  </mat-card>
+                    </div>
+                  </div>
+                </div>
+                </div>
+           
+
+
+
+             

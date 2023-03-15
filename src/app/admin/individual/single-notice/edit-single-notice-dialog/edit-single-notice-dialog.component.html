@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Edit Student</h2>
+<mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Title" [(ngModel)]="data.noticeTitle">
+      </mat-form-field>
+      
+      <mat-form-field>
+        <textarea matInput matTextareaAutosize matAutosizeMaxRows="5" placeholder="Message" [(ngModel)]="data.noticeMsg"></textarea>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <input matInput placeholder="Date" [(ngModel)]="data.creationDate">
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button (click)="onCancelClick()">Cancel</button>
+      <button mat-raised-button color="primary" [mat-dialog-close]="data">Save</button>
+    </mat-dialog-actions>

@@ -1,0 +1,24 @@
+/* Set the background color of the body */
+body {
+    
+    background-color: #f2f2f2;
+  }
+  
+  /* Center the heading text */
+  h1.text-center {
+    text-align: center;
+    
+  }
+  
+  /* Add some margin to the form fields */
+  .mat-form-field {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  /* Center the submit button */
+  .container.text-center button {
+    display: block;
+    margin: 0 auto;
+  }
+  

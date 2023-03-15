@@ -1,0 +1,56 @@
+<mat-card  *ngIf="user">
+    <h1>Your Profile Details</h1>
+    <!-- {{user | json}} -->
+    <mat-card-content>
+      <div class="bootstrap-wrapper">
+        <div class="container">
+          <div class="container text-center">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg" alt="" class="profile-image" />
+            <h1 class="mt20">{{ user.firstName }} {{ user.lastName }}</h1>
+
+          </div>
+          <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <table class="table">
+                <tr>
+                  <td>username</td>
+                  <td>{{user.username}}</td>
+                </tr>
+                <tr>
+                  <td>userid</td>
+                  <td>{{user.id}}</td>
+                </tr>
+                <tr>
+                  <td>studentid</td>
+                  <td>{{user.studentId}}</td>
+                </tr>
+                <tr>
+                  <td>studentClassId</td>
+                  <td>{{user.studentClassId}}</td>
+                </tr>
+                <tr>
+                  <td>phone</td>
+                  <td>{{user.phone}}</td>
+                </tr>
+                <tr>
+                  <td>Role</td>
+                  <td>{{user.authorities[0].authority}}</td>
+                </tr>
+                <tr>
+                  <td>Status</td>
+                  <td>{{user.enabled?"ACTIVE":"NOTACTIVE"}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="d-flex justify-content-center">
+      <div class="container text-center">
+        <button mat-raised-button color="primary">UPDATE</button>
+        <button class="ml40" mat-raised-button color="accent">share</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+  

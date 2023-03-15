@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit()">
+
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="notice.title" name="title" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Message</mat-label>
+      <textarea matInput [(ngModel)]="notice.message" name="message" required></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="notice.date" name="date" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+  

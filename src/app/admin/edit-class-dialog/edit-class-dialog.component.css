@@ -1,0 +1,30 @@
+table{
+    margin-top: 25px;
+    width: 100%;
+}
+
+.mat-paginator {
+    font-size: 14px;
+    height: 40px;
+  }
+  
+  table {
+    font-size: 12px;
+  }
+  
+  th,
+  td {
+    padding: 7px;
+  }
+  
+
+  .update-button {
+    background-color: rgba(16, 2, 2, 0.084);
+    color: white;
+  }
+  
+  .delete-button {
+    background-color: red;
+    color: white;
+  }
+  

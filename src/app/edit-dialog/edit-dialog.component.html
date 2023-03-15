@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Edit Student</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Student Name" [(ngModel)]="data.studentName">
+  </mat-form-field>
+  <!-- <mat-form-field>
+    <input matInput placeholder="Class" [(ngModel)]="data.className">
+  </mat-form-field> -->
+  <!-- <mat-form-field>
+    <mat-select placeholder="Class" [(ngModel)]="data.studentClassId" (selectionChange)="onClassSelected()">
+      <mat-option *ngFor="let class of classes" [value]="class.id">{{class.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input matInput placeholder="Father Name" [(ngModel)]="data.fatherName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Father Name" [(ngModel)]="data.fatherName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Mother Name" [(ngModel)]="data.MotherName">
+  </mat-form-field> -->
+  <mat-form-field>
+    <input matInput placeholder="Student ID" [(ngModel)]="data.studentId">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Address" [(ngModel)]="data.address">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="data">Save</button>
+</mat-dialog-actions>
+

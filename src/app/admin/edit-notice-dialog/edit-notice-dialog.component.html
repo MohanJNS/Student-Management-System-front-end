@@ -1,0 +1,22 @@
+
+<mat-card class="card-style">
+<h2 mat-dialog-title>Edit Student</h2>
+<mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Title" [(ngModel)]="data.title">
+      </mat-form-field>
+      
+      <mat-form-field>
+        <textarea matInput matTextareaAutosize matAutosizeMaxRows="5" placeholder="Message" [(ngModel)]="data.message"></textarea>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <input matInput placeholder="Date" [(ngModel)]="data.date">
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button (click)="onCancelClick()">Cancel</button>
+      <button mat-raised-button color="primary" [mat-dialog-close]="data">Save</button>
+    </mat-dialog-actions>
+    
+  </mat-card>

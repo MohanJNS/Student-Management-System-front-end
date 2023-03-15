@@ -1,0 +1,25 @@
+.container-fluid {
+    margin-top: 50px;
+  }
+  
+
+  .dashboard-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+
+
+  /* Define the styles for each card color */
+.dashboard-card-students {
+  background-color: #7cb342;
+}
+.dashboard-card-teachers {
+  background-color: #009688;
+}
+.dashboard-card-courses {
+  background-color: #8d93b7;
+}
+.dashboard-card-enrollments {
+  background-color: #f44336;
+}

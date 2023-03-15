@@ -1,0 +1,66 @@
+<mat-card class="my-custom-class">
+    <mat-action-list class="my-custom-class">
+      <div mat-subheader class="my-custom-class">Menu</div>
+      <button routerLink="/user-dashboard" mat-list-item class="my-custom-class">
+        <mat-icon mat-list-icon class="my-custom-class">home</mat-icon> home
+      </button>
+      <button routerLink="/user-dashboard/user-profile" mat-list-item class="my-custom-class">
+        <mat-icon mat-list-icon class="my-custom-class">account_circle</mat-icon> Profile
+      </button>
+      
+      <button routerLink="/user-dashboard/user-notice" mat-list-item class="my-custom-class">
+        <mat-icon mat-list-icon class="my-custom-class">note_view</mat-icon> Notice
+      </button>
+      
+
+      <button routerLink="/user-dashboard/user-viewpublic-notice" mat-list-item class="my-custom-class">
+        <mat-icon mat-list-icon class="my-custom-class">note_view</mat-icon> PublicNotice 
+      </button>
+      
+      <button routerLink="/user-dashboard/user-class-notice" mat-list-item class="my-custom-class">
+        <mat-icon mat-list-icon class="my-custom-class">note_view</mat-icon> ClassNotice 
+      </button>
+
+
+<!-- 
+      <button routerLink="/user-dashboard/user-class-notice" mat-list-item class="my-custom-class">
+        <mat-icon mat-list-icon class="my-custom-class" matBadge="3" matBadgeSize="small" matBadgeColor="accent" matBadgePosition="below" style="padding-right: 8px;">note_view</mat-icon> 
+        ClassNotice 
+      </button> -->
+      <!-- <button mat-list-item class="my-custom-class" [matMenuTriggerFor]="menu2">
+        <mat-icon mat-list-icon class="my-custom-class">description</mat-icon> Notice
+      </button>
+      
+      <mat-menu #menu2="matMenu">
+        <button mat-menu-item routerLink="/user/notice">
+          <mat-icon>note_add</mat-icon>
+          <span>add notice</span>
+        </button>
+        <button mat-menu-item routerLink="/user/edit-notice-dialog">
+          <mat-icon>drafts</mat-icon>
+          <span>Drafts</span>
+        </button> 
+      </mat-menu> -->
+
+
+
+
+      <button mat-list-item class="my-custom-class" [matMenuTriggerFor]="menu3">
+        <mat-icon mat-list-icon class="my-custom-class">more_vert</mat-icon> More
+      </button>
+      
+      <mat-menu #menu3="matMenu">
+        <button mat-menu-item routerLink="/user/settings">
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
+        </button>
+        <button mat-menu-item routerLink="/user/logout">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+      
+
+    </mat-action-list>
+  </mat-card>
+  

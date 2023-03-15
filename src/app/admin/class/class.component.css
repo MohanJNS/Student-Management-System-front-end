@@ -1,0 +1,44 @@
+table{
+    margin-top: 25px;
+    width: 100%;
+}
+
+.mat-paginator {
+    font-size: 14px;
+    height: 90px;
+  }
+  
+  table {
+    font-size: 25px;
+  }
+  
+  th,
+  td {
+    padding: 7px;
+  }
+  
+  .card-style {
+    margin-top: 35px;
+    margin-left: 100px;
+    max-width: 800px; 
+    max-height: fit-content;
+  }
+  
+  ::ng-deep .mat-select-panel {
+    margin-top: 0;
+  }
+  
+  ::ng-deep .mat-option {
+    min-width: unset;
+  }
+  
+
+  table {
+    width: 100%;
+  }
+  
+  td, th {
+    width: auto;
+    white-space: nowrap;
+  }
+  

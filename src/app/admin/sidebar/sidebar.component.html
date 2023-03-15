@@ -1,0 +1,149 @@
+<mat-card class="my-custom-class">
+    <mat-action-list class="my-custom-class">
+      <div mat-subheader class="my-custom-class">Menu</div>
+      <button routerLink="/admin" mat-list-item class="my-custom-class">
+        <mat-icon mat-list-icon class="my-custom-class">home</mat-icon> home
+      </button>
+      <button routerLink="/admin/profile" mat-list-item class="my-custom-class">
+        <mat-icon mat-list-icon class="my-custom-class">account_circle</mat-icon> Profile
+      </button>
+      
+   
+
+      <!-- <button mat-button [matMenuTriggerFor]="submenu">
+
+        <mat-icon mat-list-icon class="my-custom-class">school</mat-icon>Students
+        
+      </button>
+      <mat-icon>arrow_drop_down</mat-icon> -->
+      <!-- <mat-menu #submenu="matMenu">
+        <button mat-menu-item routerLink="/admin/student">
+          <mat-icon mat-list-icon class="my-custom-class">add_circle_outline</mat-icon>
+          <span>Add Student</span>
+        </button>
+        <button mat-menu-item  routerLink="/admin/view-students">
+          <mat-icon mat-list-icon class="my-custom-class">list</mat-icon>
+          <span>Student List</span>
+        </button>
+     
+  
+ 
+        <button mat-menu-item routerLink="/admin/class">
+          <mat-icon mat-list-icon class="my-custom-class">add_circle_outline</mat-icon>
+          <span>Add Class</span>
+        </button>
+        <button mat-menu-item  routerLink="/admin/edit-dialog">
+          <mat-icon mat-list-icon class="my-custom-class">list</mat-icon>
+          <span> class List</span>
+        </button>
+      </mat-menu> -->
+      
+
+
+      <button mat-list-item class="my-custom-class" [matMenuTriggerFor]="menu">
+        <mat-icon mat-list-icon class="my-custom-class">group</mat-icon> Class
+      </button>
+      
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/admin/class">
+          <mat-icon>add_circle_outline</mat-icon>
+          <span>Add Class</span>
+        </button>
+        <button mat-menu-item routerLink="/admin/edit-dialog">
+          <mat-icon>list</mat-icon>
+          <span>Class list</span>
+        </button>
+      </mat-menu>
+      
+
+
+
+      <button mat-list-item class="my-custom-class" [matMenuTriggerFor]="menu1">
+        <mat-icon mat-list-icon class="my-custom-class">school</mat-icon> Student
+      </button>
+      
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item  routerLink="/admin/student">
+          <mat-icon>add_circle_outline</mat-icon>
+          <span>Add Student</span>
+        </button>
+        <button mat-menu-item routerLink="/admin/view-students">
+          <mat-icon>list</mat-icon>
+          <span>Student list</span>
+        </button>
+      </mat-menu>
+
+      <button mat-list-item class="my-custom-class" [matMenuTriggerFor]="menu2">
+        <mat-icon mat-list-icon class="my-custom-class">description</mat-icon> Notice
+      </button>
+      
+      <mat-menu #menu2="matMenu">
+        <button mat-menu-item routerLink="/admin/notice">
+          <mat-icon>note_add</mat-icon>
+          <span>add notice</span>
+        </button>
+        <button mat-menu-item routerLink="/admin/edit-notice-dialog">
+          <mat-icon>drafts</mat-icon>
+          <span>View-Notice</span>
+        </button> 
+      </mat-menu>
+
+
+
+
+
+      <button mat-list-item class="my-custom-class" [matMenuTriggerFor]="menu3">
+        <mat-icon mat-list-icon class="my-custom-class">description</mat-icon> Individual Notice
+      </button>
+      
+      <mat-menu #menu3="matMenu">
+        <button mat-menu-item routerLink="/admin/single-notice">
+          <mat-icon>note_add</mat-icon>
+          <span>add notice</span>
+        </button>
+        <button mat-menu-item routerLink="/admin/edit-single-notice">
+          <mat-icon>drafts</mat-icon>
+          <span>Drafts</span>
+        </button> 
+      </mat-menu>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <button mat-list-item class="my-custom-class" [matMenuTriggerFor]="menu4">
+        <mat-icon mat-list-icon class="my-custom-class">more_vert</mat-icon> More
+      </button>
+      
+      <mat-menu #menu4="matMenu">
+        <button mat-menu-item routerLink="/admin/settings">
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
+        </button>
+        <button mat-menu-item routerLink="/admin/logout">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+      
+
+
+
+
+
+
+
+
+
+    </mat-action-list>
+  </mat-card>
+  

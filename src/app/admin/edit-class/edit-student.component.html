@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Edit Student</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="className" [(ngModel)]="data.className">
+  </mat-form-field>
+  <!-- <mat-form-field>
+    <input matInput placeholder="section" [(ngModel)]="data.section">
+  </mat-form-field> -->
+  <mat-form-field>
+    <mat-label>Section</mat-label>
+    <mat-select [(ngModel)]="data.section">
+        <mat-option value="A">A</mat-option>
+        <mat-option value="B">B</mat-option>
+        <mat-option value="C">C</mat-option>
+        <mat-option value="D">D</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input matInput placeholder="createdAt" [(ngModel)]="data.createdAt">
+  </mat-form-field>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="data">Save</button>
+</mat-dialog-actions>
