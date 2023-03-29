@@ -1,0 +1,28 @@
+/* CSS for smaller screens */
+@media screen and (max-width: 600px) {
+    .mat-table-responsive {
+      overflow-x: auto;
+    }
+    table {
+      font-size: 12px;
+    }
+    th.mat-header-cell,
+    td.mat-cell {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    th.mat-header-cell {
+      font-weight: bold;
+      margin-top: 1em;
+    }
+    td.mat-cell:before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+    }
+    td.mat-cell:last-child:before {
+      content: "";
+    }
+  }
+  

@@ -2,3 +2,20 @@
     flex: 1 1 ;
   }
   
+
+  .mat-toolbar-row, .mat-toolbar-single-row {
+    display: flex;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    flex-direction: row;
+  
+}
+
+
+
+
+
+
+
+

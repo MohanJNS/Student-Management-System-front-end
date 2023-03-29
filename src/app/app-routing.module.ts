@@ -29,6 +29,8 @@ import { UserViewpublicNoticeComponent } from './user/user-viewpublic-notice/use
 import { EditSingleNoticeComponent } from './admin/individual/single-notice/edit-single-notice/edit-single-notice.component';
 import { EditSingleNoticeDialogComponent } from './admin/individual/single-notice/edit-single-notice-dialog/edit-single-notice-dialog.component';
 import { ClassNoticeComponent } from './user/class-notice/class-notice.component';
+import { CombinedNoticeComponent } from './combined-notice/combined-notice.component';
+
 
 
 const routes: Routes = [
@@ -47,7 +49,7 @@ const routes: Routes = [
       { path: 'edit-notice-dialog', component: EditNoticeComponent },
       { path: 'single-notice', component: SingleNoticeComponent },
       { path: 'edit-single-notice', component: EditSingleNoticeComponent },
-      { path: '', component: WelcomeComponent },
+      { path: 'welcome', component: WelcomeComponent },
     ],
     canActivate: [AdminGuard],
   },
@@ -61,6 +63,7 @@ const routes: Routes = [
       { path: 'user-viewpublic-notice', component: UserViewpublicNoticeComponent },
       { path: 'user-notice', component: UserNoticeComponent },
       { path: 'user-class-notice', component: ClassNoticeComponent },
+      { path: 'user-combined-notice', component: CombinedNoticeComponent },
       { path: '', component: UserWelcomeComponent },
       { path: 'user-profile', component: UserProfileComponent },
     ],

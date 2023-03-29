@@ -62,6 +62,13 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { ClassNoticeComponent } from './user/class-notice/class-notice.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import { PiechartComponent } from './piechart/piechart.component';
+import { CombinedNoticeComponent } from './combined-notice/combined-notice.component';
+import { DatePipe } from '@angular/common';
+import { StudentdetailsComponent } from './studentdetails/studentdetails.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { HeaderComponent } from './header/header.component';
+import { PageWithNavbarComponent } from './page-with-navbar/page-with-navbar.component';
 
 
 @NgModule({
@@ -100,6 +107,12 @@ import { PiechartComponent } from './piechart/piechart.component';
      EditSingleNoticeDialogComponent,
      ClassNoticeComponent,
      PiechartComponent,
+     CombinedNoticeComponent,
+     StudentdetailsComponent,
+     HeaderComponent,
+     PageWithNavbarComponent,
+
+
      
   ],
   imports: [
@@ -126,7 +139,11 @@ import { PiechartComponent } from './piechart/piechart.component';
     MatSelectModule,
     MatButtonToggleModule,
     MatBadgeModule,
-    
+    DatePipe,
+    MatSidenavModule,
+    MatExpansionModule,
+   
+
     
    
   

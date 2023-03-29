@@ -1,21 +1,16 @@
-table{
-    margin-top: 25px;
-    width: 100%;
-}
+
 
 .mat-paginator {
     font-size: 14px;
     height: 40px;
   }
   
-  table {
-    font-size: 10px;
-  }
-  
+
+/*   
   th,
   td {
     padding: 10px;
-  }
+  } */
   
 
   .update-button {
@@ -33,7 +28,7 @@ table{
 
 
 
-
+/* 
   table{
     margin-top: 25px;
     width: 100%;
@@ -44,9 +39,7 @@ table{
     height: 90px;
   }
   
-  table {
-    font-size: 25px;
-  }
+ 
   
 
   .card-style {
@@ -71,4 +64,22 @@ table{
     white-space: nowrap;
     padding: 7px;
   }
-  
+   */
+/* Default styles */
+table {
+  width: 100%;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 999px) {
+  table {
+    font-size: 0.8rem;
+  }
+  th, td {
+    padding: 0.5rem;
+  }
+  .mat-header-cell {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}

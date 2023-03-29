@@ -7,7 +7,7 @@ export class Notice{
     date!:String;
   noticeTitle: any;
   noticeMsg: any;
-  creationDate: any;
+  creationDate!: Date;
   studentId!: number;
   studentClassId!: number;
   isRead!: boolean; 

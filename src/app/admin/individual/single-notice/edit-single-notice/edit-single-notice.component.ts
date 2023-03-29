@@ -37,20 +37,23 @@ export class EditSingleNoticeComponent implements OnInit {
   }
 
 
-
   public getallNotices() {
     this.service.getNotice().subscribe(
       (data: any) => {
         console.log(data);
-        this.noticeDetails = data;
+        this.noticeDetails = data.map((notice: UserNotice) => {
+          return {
+            ...notice,
+            creationDate: new Date(notice.creationDate).toLocaleDateString('en-GB')
+          };
+        });
       },
       (error: HttpErrorResponse) => {
         console.log(error);
       }
     );
   }
-
-
+  
 
   public updateNotice(notice: UserNotice) {
     this.isEditing = true;

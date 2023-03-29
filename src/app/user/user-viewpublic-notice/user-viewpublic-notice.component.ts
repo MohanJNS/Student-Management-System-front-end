@@ -34,7 +34,15 @@ export class UserViewpublicNoticeComponent implements OnInit {
     this.noticeService.getNotice().subscribe(
       (data: any) => {
         console.log(data);
-        this.noticeDetails = data;
+        // this.noticeDetails = data;
+        
+        this.noticeDetails = data.map((notice: Notice) => {
+          return {
+            ...notice,
+            date: new Date(notice.date.toString()).toLocaleDateString('en-GB')
+          };
+        });
+
         this.noticeDetails = this.noticeDetails.sort((a: Notice, b: Notice) => {
           return new Date(b.creationDate).getTime() - new Date(a.creationDate).getTime();
            });

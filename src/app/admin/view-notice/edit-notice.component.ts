@@ -42,14 +42,19 @@ export class EditNoticeComponent  implements OnInit{
     this.noticeService.getNotice().subscribe(
       (data: any) => {
         console.log(data);
-        this.noticeDetails = data;
+        this.noticeDetails = data.map((notice: Notice) => {
+          return {
+            ...notice,
+            date: new Date(notice.date.toString()).toLocaleDateString('en-GB')
+          };
+        });
       },
       (error: HttpErrorResponse) => {
         console.log(error);
       }
     );
   }
-
+  
 
 
   openEditDialog(notice: Notice): void {
@@ -142,7 +147,5 @@ export class EditNoticeComponent  implements OnInit{
 
 
 
-function saveAs(data: Blob, arg1: string) {
-  throw new Error('Function not implemented.');
-}
+
 

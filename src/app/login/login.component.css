@@ -1,3 +1,19 @@
 .full-width{
     width: 100%;
+    margin-left: 0%;
 }
+
+
+mat-form-field {
+    position: relative;
+    width: 100%;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  

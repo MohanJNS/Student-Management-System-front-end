@@ -1,4 +1,5 @@
-<div class="mat-elevation-z8">
+<div class="mat-elevation-z8 table-responsive">
+
   <table mat-table [dataSource]="noticeDetails">
   
 
@@ -51,7 +52,7 @@
         <th mat-header-cell *matHeaderCellDef> deleteButton </th>
         <td mat-cell *matCellDef="let element">
           <!-- <button mat-raised-button color="warn" (click)="deleteRecord(element)">Delete</button> -->
-          <button mat-raised-button color="warn" [ngStyle]="{'background-color': 'red', 'color': 'white'}" (click)="deleteNotice(element)">Delete</button>
+          <button mat-raised-button color="warn" class="button" [ngStyle]="{'background-color': 'red', 'color': 'white'}" (click)="deleteNotice(element)">Delete</button>
         </td>
       </ng-container>
 

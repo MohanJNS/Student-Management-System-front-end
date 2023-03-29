@@ -15,5 +15,5 @@ export class Student{
     address!: String;
     className!:String;
     image!: String;
-    Admissiondate!: String;
+    admissiondate!: String;
 } 

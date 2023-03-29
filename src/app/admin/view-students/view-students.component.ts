@@ -8,6 +8,7 @@ import { ConfirmationDialogComponent } from 'src/app/confirmation-dialog/confirm
 import { EditDialogComponent } from 'src/app/edit-dialog/edit-dialog.component';
 import { Student } from 'src/app/service/Student';
 import { StudentService } from 'src/app/service/student.service';
+import { StudentdetailsComponent } from 'src/app/studentdetails/studentdetails.component';
 import * as XLSX from 'xlsx';
 
 @Component({
@@ -25,6 +26,7 @@ export class ViewStudentsComponent implements OnInit{
   isEditing: boolean = false;
 students: any;
   dataSource: any;
+
 
   
 
@@ -199,12 +201,17 @@ public updateRecord(student: Student) {
   }
   
 
+  showDetails(student: Student) {
+    console.log('Clicked on student', student);
+    const dialogRef = this.dialog.open(StudentdetailsComponent, {
+      data: student
+    });
+  
+  
 
 
 
-
-
-
+  }
 
 
 

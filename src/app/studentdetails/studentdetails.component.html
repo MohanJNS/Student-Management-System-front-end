@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Student Details</h1>
+<div mat-dialog-content>
+  <p><strong>Student ID:</strong> {{data.studentId}}</p>
+  <p><strong>Name:</strong> {{data.studentName}}</p>
+  <p><strong>Admission date:</strong> {{data.admissiondate}}</p>
+  <p><strong>Address:</strong> {{data.address}}</p>
+  <p><strong>Dob:</strong>{{data.dob}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close()">Close</button>
+</div>

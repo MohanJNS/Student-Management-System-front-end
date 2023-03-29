@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { LoginService } from '../service/login.service';
 
@@ -8,6 +9,11 @@ import { LoginService } from '../service/login.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent  implements OnInit{
+  
+  @Input() showNavbar: boolean = true;
+
+  public showMenu = false;
+
  
   isLoggedIn=false;
   user: { username: string } | null = null;
@@ -42,7 +48,11 @@ public logout(){
 
 
 
-
+public toggleMenu() {
+  this.showMenu = !this.showMenu;
+}
 
 
 }
+
+

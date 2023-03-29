@@ -27,6 +27,7 @@ export class EditDialogComponent implements OnInit{
 
 
     });
+    
   }
 
   onClassSelected() {
